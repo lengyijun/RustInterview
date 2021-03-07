@@ -46,3 +46,8 @@
   <summary>HashMap与BTreeMap有什么区别？ BTreeMap为什么没有with_capacity() 方法？</summary>
   todo!()
   </details>
+  
+  <details>
+  <summary>HashMap与HashSet的区别？</summary>
+  HashSet是值为 () 的HashMap
+  </details>
