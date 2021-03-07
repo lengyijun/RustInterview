@@ -36,3 +36,13 @@
   <summary>lifetime 自动推导规则</summary>
   todo!()
  </details>
+ 
+ <details>
+  <summary>如何实现一个drop函数</summary>
+ fn drop<T>(_x: T) {}
+  </details>
+  
+  <details>
+  <summary>HashMap与BTreeMap有什么区别？ BTreeMap为什么没有with_capacity() 方法？</summary>
+  todo!()
+  </details>
