@@ -31,3 +31,8 @@
   
   T: !Clone         => move
 </details>
+
+<details>
+  <summary>lifetime 自动推导规则</summary>
+  todo!()
+ </details>
