@@ -8,14 +8,17 @@
   Copy表示这个struct可以以类似与memcpy的方式Clone
   
   一个自定义struct,必须所有元素都是Copy,整个struct才能copy
-  
+</details>
+<details>
   <summary> `let a=&*t`是什么意思？</summary>
   `&*t` 表示对t解引用。 相当于 `t.deref()`
   `a`的类型和`t`不同
-  
+</details>  
+
+<details>
    <summary>`let a=*&t`是什么意思？</summary>
    `*&t` 表示先取引用，再Copy一份。`t`必须是Copy的
    `a`的类型和`t`相同
-
 </details>
+
 
