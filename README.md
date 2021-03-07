@@ -23,4 +23,9 @@
    `a`的类型和`t`相同
 </details>
 
-
+<details>
+   <summary> `let a:T=b` 在T类型不同时，分别是什么语义？</summary>
+  T：Clone + ！Copy  => move
+  T：Clone + Copy    => copy
+  T: !Clone         => move
+</details>
