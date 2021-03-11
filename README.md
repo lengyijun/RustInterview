@@ -61,5 +61,5 @@ println!("{:?}",b);
 ```
   <details>
   <summary>以上代码能否编译？结果是多少</summary>
-  
+  可以编译。实现的是复制语义
   </details>
