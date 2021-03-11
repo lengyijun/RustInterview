@@ -51,3 +51,15 @@
   <summary>HashMap与HashSet的区别？</summary>
   HashSet是值为 () 的HashMap
   </details>
+  
+  <details>
+  <summary>
+    ```
+let mut a=[0;8];
+let mut b=[1;8];
+a=b;
+println!("{:?}",a);
+println!("{:?}",b);
+    ```
+    </summary>
+  </details>
