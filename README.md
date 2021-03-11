@@ -57,7 +57,8 @@ let mut a=[0;8];
 let mut b=[1;8];
 a=b;
 println!("{:?}",a);
-println!("{:?}",b);```
+println!("{:?}",b);
+```
   <details>
   <summary>以上代码能否编译？结果是多少</summary>
   
