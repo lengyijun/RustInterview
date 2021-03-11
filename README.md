@@ -52,15 +52,13 @@
   HashSet是值为 () 的HashMap
   </details>
   
-  <details>
- ```
+```
 let mut a=[0;8];
 let mut b=[1;8];
 a=b;
 println!("{:?}",a);
-println!("{:?}",b);
- ```
-  <summary>
-
-    </summary>
+println!("{:?}",b);```
+  <details>
+  <summary>以上代码能否编译？结果是多少</summary>
+  
   </details>
