@@ -33,6 +33,11 @@
 </details>
 
 <details>
+  <summary>`let a:Box<u8>=b` 语义是复制还是move？</summary>
+    `Box<T>` 是独占指针，是move
+</details>
+
+<details>
   <summary>lifetime 自动推导规则</summary>
   todo!()
  </details>
