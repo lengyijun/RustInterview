@@ -68,3 +68,18 @@ println!("{:?}",b);
   <summary>以上代码能否编译？结果是多少</summary>
   可以编译。实现的是复制语义
   </details>
+  
+  <details>
+    <summary> 举一个需要用到Rc的场景 </summary>
+   图的表示。每个节点有一个列表，维护邻居节点的指针
+  </details>
+  
+<details>
+    <summary>  Rc默认分配的内存在堆上还是stack上？ </summary> 
+  stack上
+  要让Rc指向堆，要这么写
+  ```
+  Rc<Box<T>>
+  ```
+</details>
+  
