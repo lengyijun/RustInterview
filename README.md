@@ -78,8 +78,6 @@ println!("{:?}",b);
     <summary>  Rc默认分配的内存在堆上还是stack上？ </summary> 
   stack上
   要让Rc指向堆，要这么写
-  ```
-  Rc<Box<T>>
-  ```
+  `Rc<Box<T>>  `
 </details>
   
