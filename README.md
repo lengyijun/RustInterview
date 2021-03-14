@@ -107,3 +107,13 @@ println!("{:?}",b);
   <summary>为什么RefCell没有Sync Trait？</summary>
   因为RefCell里有读计数器和写计数器。这两个计数器没有用
   </details>
+  
+    <details>
+      <summary>const与static的相同点和区别？</summary>
+      相同点：
+      1. 写的时候要标注类型
+      2.  只能被 constant functions and values赋值
+      
+      不同点：
+      static可修改，const 
+      </details>
