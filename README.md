@@ -14,6 +14,16 @@
   `&*t` 表示对t解引用。 相当于 `t.deref()`
   
   `a`的类型和`t`不同
+  
+  不过也要看情况。比如
+  ```
+  let a:* const u8;
+  let b:&u8=&* a;
+  ```
+    ```
+  let a:* mut u8;
+  let b:&mut u8=&* a;
+  ```
 </details>  
 
 <details>
