@@ -81,3 +81,9 @@ println!("{:?}",b);
   `Rc<Box<T>>  `
 </details>
   
+<details>
+  <summary>为什么Rc没有Send Trait？</summary>
+  因为Rc中的计数器没有用原子操作，不是线程安全的
+  而Arc中的计数器用了原子操作，是线程安全的
+  </details>
+  
