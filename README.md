@@ -80,6 +80,12 @@ println!("{:?}",b);
   要让Rc指向堆，要这么写
   `Rc<Box<T>>  `
 </details>
+
+  <details>
+  <summary>什么是Send Trait,Sync Trait</summary>
+  T:Send -> T 可以安全的move到另一个线程
+  T:Sync -> 多个线程持有 &T 是安全的
+  </details>
   
 <details>
   <summary>为什么Rc没有Send Trait？</summary>
@@ -91,4 +97,3 @@ println!("{:?}",b);
   <summary>为什么RefCell没有Sync Trait？</summary>
   因为RefCell里有读计数器和写计数器。这两个计数器没有用
   </details>
-  
