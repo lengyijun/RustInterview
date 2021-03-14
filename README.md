@@ -87,3 +87,8 @@ println!("{:?}",b);
   而Arc中的计数器用了原子操作，是线程安全的
   </details>
   
+  <details>
+  <summary>为什么RefCell没有Sync Trait？</summary>
+  因为RefCell里有读计数器和写计数器。这两个计数器没有用
+  </details>
+  
