@@ -9,6 +9,7 @@
   
   一个自定义struct,必须所有元素都是Copy,整个struct才能copy
 </details>
+
 <details>
   <summary> `let a=&*t`是什么意思？</summary>
   `&*t` 表示对t解引用。 相当于 `t.deref()`
@@ -85,10 +86,10 @@ println!("{:?}",b);
   </details>
   
 <details>
-    <summary>  Rc默认分配的内存在堆上还是stack上？ </summary> 
+    <summary>  Rc<[0;32]>默认分配的内存在堆上还是stack上？ </summary> 
   stack上
-  要让Rc指向堆，要这么写
-  `Rc<Box<T>>  `
+  要让Rc指向heap，要这么写
+  `Rc<Box<[0;32]>>  `
 </details>
 
   <details>
@@ -138,5 +139,45 @@ fn main() {
 }
 
 ```
+
+static变量在编译到二进制以后，放在可执行文件的data段，由os保证运行时能访问到data段。
+static变量一般不会触发stack分配和heap分配
+
+static在 .data
+static mut 在 .bss
 </details>
 
+<details>
+<summary>const fn的作用</summary>
+在编译期就计算，所以与运行时有关的计算不能放在const fn中
+</details>
+
+<details>
+<summary>为什么Arc不是static的变量</summary>
+首先我们为什么要Arc做static全局变量？
+Arc的优点是有内在计数器，一旦没人用了就释放。（自动释放功能）
+但是你现在要全局有用，也就是说永不释放，那就用不到自动释放的功能，所以就不要用Arc.
+</details>
+
+```
+static mut a:String=String::new();
+
+fn main() {
+    unsafe{
+        println!("{}",a);
+        a.push('a');
+        println!("{}",a);
+    }
+}
+
+
+```
+<details>
+<summary>static变量，修改后会发生什么？</summary>
+todo!()
+</details>
+
+<details>
+<summary>哪些类型默认分配在heap上？</summary>
+Box,Vec,String
+</details>
