@@ -117,3 +117,26 @@ println!("{:?}",b);
       不同点：
       static可修改，const 
       </details>
+
+<details>
+<summary>static变量做什么用？</summary>
+可以声明在函数中，用来统计函数的访问次数。
+就算函数退出，也不会释放
+```
+fn ff() {
+    static mut a: u32 = 1;
+    unsafe {
+        a += 1;
+        println!("{}", a);
+    }
+}
+
+fn main() {
+    ff();
+    ff();
+    ff();
+}
+
+```
+</details>
+
