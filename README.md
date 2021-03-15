@@ -108,7 +108,7 @@ println!("{:?}",b);
   因为RefCell里有读计数器和写计数器。这两个计数器没有用
   </details>
   
-    <details>
+<details>
       <summary>const与static的相同点和区别？</summary>
       相同点：
       1. 写的时候要标注类型
@@ -116,7 +116,7 @@ println!("{:?}",b);
       
       不同点：
       static可修改，const 
-      </details>
+</details>
 
 <details>
 <summary>static变量做什么用？</summary>
