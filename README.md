@@ -181,3 +181,8 @@ todo!()
 <summary>哪些类型默认分配在heap上？</summary>
 Box,Vec,String
 </details>
+
+<details>
+<summary>static变量的drop函数会不会被调用？</summary>
+不会
+</details>
