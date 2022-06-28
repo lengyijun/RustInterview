@@ -186,3 +186,25 @@ Box,Vec,String
 <summary>static变量的drop函数会不会被调用？</summary>
 不会
 </details>
+
+<details>
+<summary>
+以下哪种写法会报错
+
+let mut num = 32_u32;
+
+let a = &mut num;
+
+// let b : &mut _ = a; // case 1 : ok
+// let b = &mut *a;    // case 2 : ok
+// let b = a;          // case 3 : wrong
+
+b;
+a;
+
+</summary>
+
+只有case 3 会报错
+
+</details>
+
